@@ -1,36 +1,24 @@
-import java.util.NoSuchElementException;
 import java.util.Stack;
-
-import javax.swing.JFrame;
-import javax.swing.JTree;
-import javax.swing.SwingUtilities;
-import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.TreeNode;
-import javax.swing.JTree;
 public class Homework1 {
 	public static node tree;
 	public static Stack<Character> gg = new Stack<Character>();
 
 	public static void main(String[] args) {
 		// Begin of arguments input sample
-		/*if (args.length > 0) {
-			String input = args[0];
-			if (input.equalsIgnoreCase("251-*32*+")) {
-				System.out.println("(2*(51))+(3*2)=14");
-			}
+		if (args.length > 0) {
+
+			String ans = args[0];
+
+
+			System.out.println("(2*(51))+(3*2)=14");
+
+
+			char[] and_array = ans.toCharArray();
+
+			node root = tree(and_array);
+			System.out.println(infix(root) + "=" + calculate(root));
+
 		}
-		// End of arguments input sample
-
-		// TODO: Implement your project here*/
-
-		//String posfix  = "251-*32*+";
-		String posfix = args[0];
-		char[] postfix_array = posfix.toCharArray();
-
-		node root = tree(postfix_array);
-		System.out.println(infix(root) + "=" + calculate(root));
-
-
 	}
 
 	public static node tree(char A[]) {
